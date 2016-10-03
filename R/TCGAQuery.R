@@ -520,7 +520,7 @@ GDCquery_Maf <- function(tumor, save.csv= FALSE, directory = "GDCdata"){
                             PICK = col_integer(),
                             TSL = col_integer(),
                             HGVS_OFFSET = col_integer(),
-                            MINIMISED = col_integer()),
+                            MINIMISED = col_integer(),PUBMED= col_character(),SOMATIC= col_character()),
                         progress = TRUE)
         if(ncol(ret) == 1) ret <- read_csv(file,
                                            comment = "#",
@@ -537,7 +537,7 @@ GDCquery_Maf <- function(tumor, save.csv= FALSE, directory = "GDCdata"){
                                                PICK = col_integer(),
                                                TSL = col_integer(),
                                                HGVS_OFFSET = col_integer(),
-                                               MINIMISED = col_integer()),
+                                               MINIMISED = col_integer(),PUBMED= col_character(),SOMATIC= col_character()),
                                            progress = TRUE)
         ret
     })
